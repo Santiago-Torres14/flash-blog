@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div class="page-content">
+
+  <div class="grid-row composer">
+    <!-- text -->
+    <div class="text intro">
+      <h1 class="center">Pyshics for you</h1>
+      <h2 class="center">blog made by students for students</h2>
+    </div>
+    <!--/ text -->
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="grid-row">
+    <!-- best reviews -->
+    <div class="best-reviews">
+        <h2>Main posts</h2>
+        <div class="page-separator"></div>
+        {%for article in articles%}
+        <ul id="best-reviews" class="wow scale-to-top">
+          <li class="wow scale-to-top">
+            <h3><a href="/article/{{article.id}}">{{ article.title }}</a></h3>
+            <div class="post-info">
+              <span>{{ article.date }}</span>
+              <span>{{ article.author_id.first_name }}</span>
+              <p>{{ article.description }}</p>
+            </div>
+          </li>
+          <div class="page-separator"></div>
+
+        </ul>
+        {% endfor %}
+    </div>
+    <!--/ best reviews -->
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<form action="" method="post">
+  <br />
+  <h2 align="center">Login</h2>
+  <br />
+  <div class="page-separator"></div>
+  <br>
+  <div class="form-row grid-row">
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      id="email"
+      placedholder="Enter email"
+    />
+  </div>
+  <br />
+  <div class="form-row grid-row">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      name="password"
+      id="password"
+      placedholder="Enter password"
+    />
+  </div>
+  <br />
+  <div class="grid-row">
+    <button type="submit" class="owl-buttons button">Login</button>
+  </div>
+</form>
+{% endblock %}

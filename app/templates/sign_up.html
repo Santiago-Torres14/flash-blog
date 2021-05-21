@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %}Sign up{% endblock %} {% block
+content %}
+<form action="" method="post">
+  <br />
+  <h2 align="center">sign up</h2>
+  <br />
+  <div class="page-separator"></div>
+  <br>
+  <div class="form-row grid-row">
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      id="email"
+      placedholder="Enter email"
+    />
+  </div>
+  <br>
+  <div class="form-row grid-row">
+    <label for="firstName">first name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="firstName"
+      id="firstName"
+      placedholder="Enter first name"
+    />
+  </div>
+  <br>
+  <div class="form-row grid-row">
+    <label for="password1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      name="password1"
+      id="password1"
+      placedholder="Enter password"
+    />
+  </div>
+  <br>
+  <div class="form-row grid-row">
+    <label for="password2">Confirm password</label>
+    <input
+      type="password"
+      class="form-control"
+      name="password2"
+      id="password2"
+      placedholder="Confirm password"
+    />
+  </div>
+  <br />
+  <div class="grid-row">
+    <button type="submit" class="owl-buttons button">Submit</button>
+  </div>
+</form>
+{% endblock %}

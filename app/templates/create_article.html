@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form class="feedback" action="" method="POST" >
+    <h3>
+        Write an article
+    </h3>
+    <div class="form-submit">
+        <label for="title">Title</label>
+        <input type="text"
+        class="input-text"
+        name="title"
+        id="title"
+        placeholder="Enter title">
+    </div>
+    <div class="form-submit">
+        <label for="description">description</label>
+        <input type="text"
+        class="input-text"
+        name="description"
+        id="description"
+        placeholder="Enter a short description of the article">
+    </div>
+    <div class="form-submit">
+        <label for="text">write your article</label>
+        <textarea name="text" id="text" cols="30" rows="25" class="feedback"></textarea>
+    </div>
+    <button class="button" type="submit">submit</button>
+</form>
+
+{% endblock %}

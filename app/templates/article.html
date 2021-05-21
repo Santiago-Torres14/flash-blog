@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div class="page-content">
+  <div class="grid-row">
+    <div class="composer">
+
+      {% if user.is_authenticated %}
+      {% if user.id == article.author_id %}
+      <a href="/delete/{{ article.id }}" class="button">DELETE</a>
+      <a href="/edit/{{ article.id }}" class="button">EDIT</a>
+      <br>
+      <br>
+      {% endif %}
+      {% endif %}
+
+      <div class="text">
+        <h1 class="center">{{ article.title }}</h1>
+
+        <div
+          class="latest-article"
+          style="text-align: justify; font-size: 20px;"
+        >
+          <div class="post-info">
+            <span>{{ article.date }}</span><span><i class="fa fa-edit"></i>{{ article.author_id.first_name }}</span>
+          </div>
+
+          <br>
+
+          {{ article.text|safe }}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
